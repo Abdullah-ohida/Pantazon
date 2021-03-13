@@ -1,4 +1,4 @@
-package com.services;
+package com.model;
 
 import java.math.BigDecimal;
 
@@ -8,8 +8,8 @@ public class Product {
     private String description;
     private BigDecimal price;
 
-    public Product(){
-        this(null, null,null);
+    public Product() {
+        this(null, null, null);
     }
 
     public Product(String name, String description, BigDecimal price) {
@@ -49,5 +49,4 @@ public class Product {
     public void setPrice(BigDecimal price) {
         this.price = price;
     }
-
 }

@@ -1,9 +1,10 @@
 package com.services;
 
 import com.exceptions.ProductException;
+import com.model.Product;
 
 public class ProductServiceImpl implements ProductService{
-    Product productRepoMock = new Product();
+    private ProductRepoMock productRepo = new ProductRepoMock();
     /**
      * Search for product with specified id
      *
@@ -11,7 +12,7 @@ public class ProductServiceImpl implements ProductService{
      * @return Product with valid product id
      */
     @Override
-    public Product findProduct(String productId) throws ProductException {
-        return productRepoMock;
+    public Product findProductById(String productId) throws ProductException {
+        return productRepo.getProductById(productId);
     }
 }
